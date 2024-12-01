@@ -29,7 +29,7 @@ This project is built using simple yet powerful web technologies:
 
 ## How to View
 
-To experience "Dater", simply visit [https://byquangthanh.github.io/valentine.github.io/](https://byquangthanh.github.io/valentine.github.io/) from any modern web browser.
+To experience "Dater", simply visit [https://beckdregsta2.github.io/dater.github.io/](https://beckdregsta2.github.io/dater.github.io/) from any modern web browser.
 
 ## How to Contribute and Translate and Modify
 
