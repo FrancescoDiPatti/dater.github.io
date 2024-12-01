@@ -29,13 +29,13 @@ This project is built using simple yet powerful web technologies:
 
 ## How to View
 
-To experience "Dater", simply visit [https://beckdregsta2.github.io/dater.github.io/](https://beckdregsta2.github.io/dater.github.io/) from any modern web browser.
+To experience "Dater", simply visit [https://francescodipatti.github.io/dater.github.io/](https://francescodipatti.github.io/dater.github.io/) from any modern web browser.
 
 ## How to Contribute and Translate and Modify
 
 Contributions to the "Dater" project and "Will You Be My Valentine?" project are more than welcome. Whether it's suggesting new features, improving the design, or fixing bugs, here's how you can contribute:
 
-1. **Fork the Repository**: Start by forking the [project repository](https://github.com/beckdregsta2/dater.github.io) on GitHub.
+1. **Fork the Repository**: Start by forking the [project repository](https://francescodipatti.github.io/dater.github.io) on GitHub.
 2. **Clone Your Fork**: Clone your fork to your local machine for development.
 3. **Create a New Branch**: Make a new branch for your changes.
 4. **Make Your Changes**: Implement your feature, translate, customize, fix, or improvement.
