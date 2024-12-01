@@ -1,32 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="it">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Be My Valentine</title>
-    <link rel="stylesheet" href="css/valentine.css" />
-  </head>
-  <body>
-    <div id="valentineQuestion"><b>Will you be my valentine?</b></div>
-    <button class="answerButton" onclick="location.href='thankyou.html'">
-      Yes
-    </button>
-    <button class="answerButton" id="noButton">I no no wanna o(╥﹏╥)o</button>
-    <br />
-    <img src="cat.gif" alt="cat asking question" class="responsive" />
+    <title>Vuoi uscire con me?</title>
+    <link rel="stylesheet" href="stile.css" />
+    <style>
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1 -->
+    <div id="section1" class="section active">
+        <div id="valentineQuestion"><b>Vuoi uscire con me?</b></div>
+        <button class="answerButton" id="yesButton" onclick="showSection('section2')">Sii!!</button>
+        <button class="answerButton" id="noButton">no ewww</button>
+        <br />
+        <img id="startImage" src="files/mouse.gif" alt="sad" class="responsive" />
+    </div>
 
+    <!-- 2 -->
+    <div id="section2" class="section">
+        <div id="thankyou"><b>Yeeee</b></div>
+        <img id="rizz" src="files/happy_cat.gif" alt="happy cat" class="responsive" />
+        <br />
+        <audio id="happyAudio">
+            <source src="files/yippe.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+        <h1>Non andare via!</h1>
+        <button class="button" onclick="showSection('section3')">Cliccami!</button>
+    </div>
+
+    <!-- 3 -->
+    <div id="section3" class="section">
+        <h1 title="choose a date">Quando ci vediamo??</h1>
+        <form class="form-group">
+            <label>Scegli il giorno:</label>
+            <div>
+                <input type="date" id="selectedDate" />
+                <button class="button" type="button" onclick="showSection('section4')">Invia</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 4 -->
+    <div id="section4" class="section">
+        <div id="question"><b>Cosa vuoi mangiare?</b></div>
+        <div class="selection">
+            <div class="item">
+                <img src="food/hamburger.jpg" alt="Hamburger" />
+                <label><input type="checkbox" name="food" value="Hamburger"/>Hamburger</label>
+            </div>
+            <div class="item">
+                <img src="food/chinesefood.jpeg" alt="Cinese" />
+                <label><input type="checkbox" name="food" value="Cinese" /> Cibo Cinese</label>
+            </div>
+            <div class="item">
+                <img src="food/pasta.jpg" alt="Pasta" />
+                <label><input type="checkbox" name="food" value="Pasta" /> Pasta</label>
+            </div>
+            <div class="item">
+                <img src="food/lasagne.jpg" alt="Lasagne" />
+                <label><input type="checkbox" name="food" value="Lasagne" /> Lasagne</label>
+            </div>
+            <div class="item">
+                <img src="food/pizza.jpeg" alt="Pizza" />
+                <label><input type="checkbox" name="food" value="Pizza" /> pizza</label>
+            </div>
+            <div class="item">
+                <img src="food/kfc.jpg" alt="KFC" />
+                <label><input type="checkbox" name="food" value="KFC" /> KFC</label>
+            </div>
+            <div class="item">
+                <img src="food/francese.jpg" alt="Francese" />
+                <label><input type="checkbox" name="food" value="Francese" /> Francese</label>
+            </div>
+            <div class="item">
+                <img src="food/sushi.jpeg" alt="Sushi" />
+                <label><input type="checkbox" name="food" value="Sushi" /> Sushi</label>
+            </div>
+        </div>
+        <button class="button" onclick="showSection('section5')">Continua!!!</button>
+    </div>
+
+    <!-- 5 -->
+    <div id="section5" class="section">
+        <div id="question">Scegli dessert che mangiamo</div>
+        <div class="selection">
+            <div class="item">
+                <img src="food/gelato.jpeg" alt="Gelato" />
+                <label><input type="checkbox" name="dessert" value="Gelato" />Gelato</label>
+            </div>
+            <div class="item">
+                <img src="food/churro.jpeg" alt="Churro" />
+                <label><input type="checkbox" name="dessert" value="Churro" /> Churro</label>
+            </div>
+            <div class="item">
+                <img src="food/torta.jpg" alt="Torta" />
+                <label><input type="checkbox" name="dessert" value="Torta" /> Torta</label>
+            </div>
+            <div class="item">
+                <img src="food/mochi.jpeg" alt="mochi" />
+                <label><input type="checkbox" name="dessert" value="mochi" /> mochi</label>
+            </div>
+            <div class="item">
+                <img src="food/crepes.jpg" alt="Crepes" />
+                <label><input type="checkbox" name="dessert" value="Crepes" /> Crepes</label>
+            </div>
+            <div class="item">
+                <img src="food/pesce.jpeg" alt="Pesce" />
+                <label><input type="checkbox" name="dessert" value="Pesce" />Pesce</label>
+            </div>
+        </div>
+        <button class="button" onclick="showSection('section6')">Continua!!!</button>
+    </div>
+
+    <!-- 6 -->
+    <div id="section6" class="section">
+        <div id="question"><b>Cosa facciamo dopo?</b></div>
+        <div class="selection">
+            <div class="item">
+                <img src="activities/arcade.jpeg" alt="Sala Giochi" />
+                <label><input type="checkbox" name="activities" value="SalaGiochi" />Sala Giochi</label>
+            </div>
+            <div class="item">
+                <img src="activities/cinema.jpeg" alt="Cinema" />
+                <label><input type="checkbox"name="activities"value="Cinema"/>Cinema</label>
+            </div>
+            <div class="item">
+                <img src="activities/amici.jpg" alt="Amici" />
+                <label><input type="checkbox"name="activities"value="Amici"/>Amichetti</label>
+            </div>
+            <div class="item">
+                <img src="activities/tramonto.jpg" alt="Tramonto" />
+                <label><input type="checkbox"name="activities"value="Tramonto"/>Tramonto</label>
+            </div>
+            <div class="item">
+                <img src="activities/parco.jpeg" alt="Parco" />
+                <label><input type="checkbox"name="activities"value="Parco"/>Parco</label>
+            </div>
+            <div class="item">
+                <img src="activities/scalata.jpg" alt="Scalata" />
+                <label><input type="checkbox"name="activities"value="Scalata"/>Scalata</label>
+            </div>
+            <div class="item">
+                <img src="activities/mare.jpg" alt="Mare" />
+                <label><inputtype="checkbox"name="activities"value="Mare"/>Mare</label>
+            </div>
+            <div class="item">
+                <img src="activities/cucire.jpg" alt="Cucire" />
+                <label><input type="checkbox"name="activities"value="Cucire"/>Cucire</label>
+            </div>
+        </div>
+        <button class="button" onclick="location.href='lastpage.html'">Continua!!!</button>
+    </div>
     <script>
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
-          var yesButton = document.querySelector(
-            'button[onclick*="thankyou.html"]'
-          );
-          var currentFontSize = parseInt(
-            window.getComputedStyle(yesButton).fontSize
-          );
-          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        // Function for show specific section
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            const happyAudio = document.getElementById('happyAudio');
+            if (happyAudio) {
+                happyAudio.pause();
+                happyAudio.currentTime = 0;
+            }
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            const newSection = document.getElementById(sectionId);
+            newSection.classList.add('active');
+            if (sectionId === 'section2') {
+                happyAudio.play();
+            }
+        }
+
+        // angry image after 10 click
+        let noButtonClickCount = 0;
+        const startImage = document.getElementById("startImage");
+        document.getElementById("noButton").addEventListener("click", function () {
+            noButtonClickCount++;
+            if (noButtonClickCount > 10) {
+                startImage.src = "files/angry.jpg";
+                startImage.style.width = "600px";
+                startImage.style.height = "auto";
+            }
         });
+        // enlager yes button
+        const noButton = document.getElementById("noButton");
+        const yesButton = document.getElementById("yesButton");
+        noButton.addEventListener("click", function () {
+            // Recupera la dimensione attuale del font del pulsante "Sì!!"
+            const currentFontSize=parseInt(window.getComputedStyle(yesButton).fontSize);
+            // Incrementa la dimensione del font di 10px
+            yesButton.style.fontSize = currentFontSize + 10 + "px";
+        });
+        
     </script>
-  </body>
+    <script>
+        // function for manage image click green halo
+        function setupImageClickHandlers() {
+          const Items = document.querySelectorAll('.item');
+          Items.forEach((item) => {
+            const img = item.querySelector('img');
+            const checkbox = item.querySelector('input[type="checkbox"]');
+            img.addEventListener('click', () => {
+              // remove click
+              checkbox.checked = !checkbox.checked;
+              img.classList.toggle('selected', checkbox.checked);
+            });
+          });
+        }
+  
+        // handlers start page
+        setupImageClickHandlers();
+  
+        // refering html
+        const newInput = document.getElementById('new');
+        const addButton = document.getElementById('addButton');
+        const Container = document.querySelector('.selection');
+  
+        // new activity management
+        addButton.addEventListener('click', () => {
+          const newValue = newInput.value.trim();
+          if (newValue) {
+            // new element
+            const newItem = document.createElement('div');
+            newItem.className = 'item';
+            newItem.innerHTML = `
+              <img src="files/default.gif" alt="${newValue}" />
+              <input type="checkbox" name="x" value="${newValue}" />
+              <label>${newValue}</label>
+            `;
+  
+            // add container
+            Container.appendChild(newItem);
+  
+            // add click halo
+            setupImageClickHandlers();
+  
+            // insert someting
+            newInput.value = '';
+          } else {
+            alert('Per favore, inserisci un\'attività valida.');
+          }
+        });
+      </script>
+</body>
 </html>
